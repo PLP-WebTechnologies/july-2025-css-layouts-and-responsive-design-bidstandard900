@@ -1,0 +1,362 @@
+/* ===========================
+   Global Styles
+   =========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #fdfdfd;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #004080;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #0066cc;
+  color: #fff;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background: #004080;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Layout Grid
+   =========================== */
+.layout-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-areas:
+    "sidebar content";
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #f5f9ff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.content {
+  grid-area: content;
+}
+
+/* ===========================
+   Header & Navigation
+   =========================== */
+.site-header {
+  background: #0066cc;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header .brand .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.site-header .tagline {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.main-nav a {
+  color: #fff;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* ===========================
+   Hero
+   =========================== */
+.hero {
+  background: #eaf3ff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* ===========================
+   Sections
+   =========================== */
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #003366;
+}
+
+.practice-list,
+.checklist {
+  list-style: disc inside;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.8rem;
+}
+
+/* ===========================
+   Tables
+   =========================== */
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.pricing-table th {
+  background: #0066cc;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pricing-table tr:hover td {
+  background: #f5f9ff;
+}
+
+/* ===========================
+   Cards (Flexbox)
+   =========================== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+/* ===========================
+   Forms
+   =========================== */
+.contact-form {
+  margin-top: 1.2rem;
+  background: #f5f9ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form fieldset {
+  border: none;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.4rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  margin-top: 1.2rem;
+}
+
+/* ===========================
+   Footer
+   =========================== */
+.site-footer {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.8rem;
+}
+
+.footer-links a {
+  color: #fff;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
+/* ===========================
+   Sidebar
+   =========================== */
+.sidebar h2,
+.sidebar h3 {
+  margin-bottom: 0.6rem;
+  color: #003366;
+}
+
+.sidebar ul {
+  list-style: square inside;
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+@media (max-width: 900px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "content"
+      "sidebar";
+  }
+
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background: #005bb5;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    background: #004080;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .nav-toggle[aria-expanded="true"] + ul {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+}
